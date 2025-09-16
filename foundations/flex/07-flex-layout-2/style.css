@@ -27,3 +27,83 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/* SOLUTION */
+/* 
+- The footer is pushed to the bottom of the screen (the footer may go _below_ the bottom of the screen if the content of the 'cards' section overflows and/or if your screen is shorter).
+- The sidebar has 16px padding.
+- The cards are arranged horizontally, but wrap to multiple lines when they run out of room on the page. */
+
+body{
+  display: flex;
+  flex-direction: column;
+
+}
+.header{
+  padding: 16px;
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+
+.sidebar{
+padding: 16px;
+flex:0 0 auto;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li{
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.middle{
+  display: flex;
+  flex:1 0 auto; 
+  /* solution has flex : 1 1 auto */
+  
+}
+/* 
+.cards{
+  display: flex;
+  padding: 48px;
+  flex: 1 0 10px;
+  flex-wrap: wrap;
+
+}
+
+.card{
+  padding: 16px;
+  width: 423px;
+  margin: 10px;
+} */
+
+.cards {
+  padding: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  padding: 16px;
+  width: 300px;
+}
